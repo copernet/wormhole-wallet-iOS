@@ -83,7 +83,7 @@ public struct WhWalletRequestHandler {
                                     let hashData = txHash.hexToData()!
                                     try blockStore.writeQueue.sync {
                                         try blockStore.addTransaction(transaction, hash: Data(hashData.reversed()))
-                                        if(index==result.count){
+                                        if(index==result.count-1){
                                             self.toNotificationSome()
                                         }
                                     }
@@ -279,6 +279,7 @@ struct WhHTTPRequestHandler {
     }
     
     static func pushSignedTx(rawData: String, complete:@escaping ()->Void = {}, failure: @escaping ()->Void = {}) {
+        DLog(message: rawData)
         let parameters = ["signedTx": rawData]
         Alamofire.request(fullAddress(relaAddress: WhHTTPRequestHandler.UnSignedPath.push.rawValue), method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
             if response.result.isSuccess {

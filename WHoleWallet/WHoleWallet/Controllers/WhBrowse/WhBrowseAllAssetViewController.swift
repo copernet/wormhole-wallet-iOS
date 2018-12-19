@@ -115,8 +115,6 @@ class WhBrowseAllAssetViewController: UIViewController, UITableViewDelegate, UIT
         self.searchBar = searchBar
         tableView.tableHeaderView = searchBar
         
-       
-        
         fetch(direction: .none, serach: nil)
     }
     

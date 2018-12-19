@@ -13,7 +13,7 @@
 import Foundation
 import MMPopupView
 import BitcoinKit
-
+import Toast_Swift
 
 class WhCustomAlertView: MMPopupView {
     
@@ -352,10 +352,16 @@ class WhQRCodeAlertView: MMPopupView {
             make.right.equalToSuperview().offset(-25)
             make.bottom.equalToSuperview().offset(-46 * screenWidth() / 360)
         }
+//        iconView.isMultipleTouchEnabled = true
+        iconView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(copyAddress))
+        iconView.addGestureRecognizer(tap)
+        
         
         let label = UILabel(frame: CGRect.zero)
         label.text = self.subTitle
         label.textAlignment = .center
+        label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 18)
         label.textColor = UIColor(hex: 0x182c4f)
         self.addSubview(label)
@@ -365,6 +371,12 @@ class WhQRCodeAlertView: MMPopupView {
             make.right.equalTo(iconView.snp.left).offset(-5)
         }
         
+    }
+    
+    
+    @objc func copyAddress() {
+        UIPasteboard.general.string = self.subTitle
+        self.makeToast("the address has been copied !")
     }
     
     deinit {

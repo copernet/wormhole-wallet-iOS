@@ -122,6 +122,7 @@ class WhHomeViewController: UIViewController,UITableViewDelegate, UITableViewDat
         
         label = UILabel(frame: CGRect.zero)
         label.textColor = UIColor.white
+        label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 14)
         label.text = "fdalaldafdffdfdueorueorueofff"
         blueBg.addSubview(label)
@@ -228,7 +229,7 @@ class WhHomeViewController: UIViewController,UITableViewDelegate, UITableViewDat
     func setTextWithWallet() {
         let wallet = WhWalletManager.shared.whWallet
         accountNameLabel.text = wallet?.name
-        addressLabel.text = wallet?.legacyAddr
+        addressLabel.text = wallet?.cashAddr
         bchWalletBtn.amountLabel.text = WhWalletManager.shared.getBalancePure().toDouble().toString()
     }
     
@@ -303,8 +304,11 @@ class WhHomeViewController: UIViewController,UITableViewDelegate, UITableViewDat
     }
     
     @objc func showQRCode() {
-        let pic = generateVisualQRCode(address: "mnS2geiaHgzxfa6GyXPQ1WhgEGbZyNuuGK")
-        let alert = WhQRCodeAlertView(bg: "main_qr_bg", pic: pic!, subTitle: "mnS2geiaHgzxfa6GyXPQ1WhgEGbZyNuuGK",completeBlock:nil)
+        guard let whwallet = WhWalletManager.shared.whWallet else {
+            return
+        }
+        let pic = generateVisualQRCode(address: whwallet.cashAddr)
+        let alert = WhQRCodeAlertView(bg: "main_qr_bg", pic: pic!, subTitle: whwallet.cashAddr, completeBlock:nil)
         alert.show()
     }
     

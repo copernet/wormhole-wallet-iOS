@@ -22,7 +22,7 @@ class WhMineViewController: UITableViewController {
     
     
     deinit {
-        
+        NotificationCenter.default.removeObserver(self)
     }
     
     @objc func walletChanged(notification: Notification) {
@@ -31,10 +31,19 @@ class WhMineViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
+    
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         NotificationCenter.default.addObserver(self, selector: #selector(walletChanged(notification:)), name: Notification.Name.AppController.walletChanged, object: nil)
         walletNameLabel.text = WhWalletManager.shared.whWallet?.name
         addressLabel.text = WhWalletManager.shared.whWallet?.cashAddr
@@ -42,8 +51,10 @@ class WhMineViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let toViewController = segue.destination
+        toViewController.view.backgroundColor = UIColor.white
         toViewController.hidesBottomBarWhenPushed = true
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
+
     
 }

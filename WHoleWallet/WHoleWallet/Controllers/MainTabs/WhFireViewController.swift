@@ -93,7 +93,7 @@ class WhFireViewController: UIViewController,UITextFieldDelegate {
         
         //input amount too large
         if Double(WhWalletManager.shared.getBalancePure())!.isLess(than: Double(amountText)!){
-            
+            self.view!.makeToast("invalid amount !")
             return
         }
         
@@ -104,21 +104,37 @@ class WhFireViewController: UIViewController,UITextFieldDelegate {
     func burn(amount:String, fee:String) {
         let wallet = WhWalletManager.shared.whWallet!
         let parameters = ["transaction_version":0, "fee":fee, "transaction_from": wallet.cashAddr, "amount_for_burn":amount] as [String : Any]
-        Alamofire.request(fullAddress(relaAddress: WhHTTPRequestHandler.UnSignedPath.burn.rawValue), method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
-            
-            if response.result.isSuccess {
-                let value  = response.result.value as! Dictionary<String,Any>
-                if let result:Dictionary<String,Any> = resPonsedResult(dictionary: value) {
-                    WormHoleSignUnSignedTxFlow.handleResult(result: result)
-                    return
-                }
-                
+        WhHTTPRequestHandler.unsignedOperate(reqCode: 68, parameters: parameters) { (result) in
+            if result.count > 0 {
+                WormHoleSignUnSignedTxFlow.handleResult(result: result, complete: {
+                    DispatchQueue.main.async {
+                        [weak self] in
+                        if let weakSelf = self {
+                            weakSelf.view!.makeToast("transaction success !", duration: 2.0, title: nil, image: nil) { didTap in
+                                weakSelf.navigationController?.popToRootViewController(animated: true)
+                            }
+                        }
+                        
+                    }
+                }, failure: {
+                    [weak self] in
+                    if let weakSelf = self {
+                        weakSelf.view!.makeToast("transaction failed !")
+                    }
+                })
             }
             
+            //do somthing
             DispatchQueue.main.async {
-                // do somthing
+                [weak self] in
+                if let weakSelf = self {
+                    weakSelf.view!.makeToast("transaction failed !")
+                }
             }
+            return
+            
         }
+        
     }
     
     

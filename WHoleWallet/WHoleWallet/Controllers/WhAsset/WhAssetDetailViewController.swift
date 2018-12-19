@@ -77,6 +77,7 @@ class WhAssetDetailViewController: UIViewController, UITableViewDelegate, UITabl
             self.tableView.estimatedSectionFooterHeight = 0;
             self.tableView.estimatedSectionHeaderHeight = 0;
         }
+        
         self.view.addSubview(tableView)
         tableView.tableFooterView = UIView()
         tableView.dataSource = self

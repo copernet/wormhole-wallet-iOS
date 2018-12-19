@@ -37,7 +37,7 @@ struct WhWallet {
     
     let hdWallet:HDWallet? = nil
     
-    var addresses = [String]()
+    var addresses = [Cashaddr]()
     
     init(index:Int, name:String, networkScheme:String, legacyAddr:String, cashAddr:String, pHash:Data) {
         self.index    = index
@@ -162,7 +162,8 @@ class WhWalletManager {
         var payments = [Payment]()
         if let usedAddresses = self.whWallet?.addresses  {
             for address in usedAddresses {
-                let newPayments = try! blockStore.transactions(address: address)
+//                let newPayments = try! blockStore.transactions(address: address)
+                let newPayments = try! blockStore.unspentTransactions(address: address)
                 for p in newPayments where !payments.contains(p){
                     payments.append(p)
                 }
@@ -237,12 +238,15 @@ class WhWalletManager {
             keychain[WhKeyChainkey.WhWalletCount] = String(index)
             
             var wallet = WhWallet(index: index, name: name, networkScheme: network.scheme, legacyAddr: legacyAddress, cashAddr: cashAddress,  pHash:hash)
-            wallet.addresses = [legacyAddress]
+            let address = try Cashaddr(legacyAddress)
+            wallet.addresses = [address]
             self.whWallet = wallet
       
         } catch  {
             print(error)
         }
+        
+        
         
     }
     
@@ -261,8 +265,14 @@ class WhWalletManager {
             let hash  = keychain[data: "\(WhKeyChainkey.WhWalletHash)_\(index)"]
             if let legacyAddr = legacy, let cashAddr = cash, let nwScheme = scheme, let wHash = hash {
                 var wallet = WhWallet(index: Int(index), name: name, networkScheme: nwScheme, legacyAddr:legacyAddr , cashAddr: cashAddr, pHash: wHash)
-                wallet.addresses = [legacyAddr]
-                return wallet
+                do {
+                    let address = try Cashaddr(cashAddr)
+                    wallet.addresses = [address]
+                    return wallet
+                } catch  {
+                    DLog(message: error)
+                    return nil
+                }
             }
         }
         return nil

@@ -145,6 +145,7 @@ static WhSocketManager *_shareSocketManager;
 
 -(BOOL)connect{
     if (!self.socket.isConnected) {
+        [self.requestDictionary removeAllObjects];
         NSError *error = nil;
         BOOL success = [self.socket connectToServer];
         if (!success) {

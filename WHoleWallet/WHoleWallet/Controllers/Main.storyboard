@@ -1551,6 +1551,7 @@
         <scene sceneID="rZ5-eA-avy">
             <objects>
                 <navigationController navigationBarHidden="YES" id="PIJ-Dw-NL5" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Account" image="tab_my_nor" id="gGy-8d-Wrh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w4T-bO-aOw">
                         <autoresizingMask key="autoresizingMask"/>
@@ -1566,12 +1567,12 @@
         <!--Wh Mine View Controller-->
         <scene sceneID="G9i-25-H2y">
             <objects>
-                <tableViewController id="lko-s1-hYa" customClass="WhMineViewController" customModule="WHoleWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="lko-s1-hYa" customClass="WhMineViewController" customModule="WHoleWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="61" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="10" id="lMB-J3-u9p">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="FOL-nf-qGy">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="FOL-nf-qGy">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -1594,8 +1595,8 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="jfldajfldajflkdajfldasjfldsfdsakdkdkd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-kz-BDh">
-                                    <rect key="frame" x="55" y="111" width="268" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jfldajfldajflkdajfldasjfldsfdsakdkdkd" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-kz-BDh">
+                                    <rect key="frame" x="20" y="111" width="335" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -1612,6 +1613,7 @@
                                 <constraint firstItem="tG4-kz-BDh" firstAttribute="top" secondItem="YAf-Zk-Wzf" secondAttribute="bottom" constant="8" id="gMR-Dy-Mup"/>
                                 <constraint firstItem="YAf-Zk-Wzf" firstAttribute="top" secondItem="DBy-Kl-waN" secondAttribute="bottom" constant="2" id="iB8-e9-ezC"/>
                                 <constraint firstItem="aKD-iB-7ZJ" firstAttribute="top" secondItem="FOL-nf-qGy" secondAttribute="top" id="nzf-n6-1aU"/>
+                                <constraint firstItem="tG4-kz-BDh" firstAttribute="leading" secondItem="FOL-nf-qGy" secondAttribute="leading" constant="20" id="rjh-h3-Bg7"/>
                                 <constraint firstItem="DBy-Kl-waN" firstAttribute="centerX" secondItem="FOL-nf-qGy" secondAttribute="centerX" id="zBX-mb-ghL"/>
                             </constraints>
                         </view>
@@ -1647,7 +1649,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="hSJ-D2-Uue" kind="show" id="MyK-vA-xHj"/>
+                                            <segue destination="hSJ-D2-Uue" kind="show" id="O1L-Ih-iay"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="r61-rZ-xEr">
@@ -1858,6 +1860,7 @@
                             <outlet property="delegate" destination="lko-s1-hYa" id="Jmp-qp-7Oj"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="qfc-2J-yJL"/>
                     <connections>
                         <outlet property="addressLabel" destination="tG4-kz-BDh" id="9Oh-cW-6s0"/>
@@ -1867,12 +1870,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VP-cC-rzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="2344"/>
+            <point key="canvasLocation" x="-71" y="2344"/>
         </scene>
         <!--Transaction Records-->
         <scene sceneID="ik6-YG-VTH">
             <objects>
-                <viewController title="Transaction Records" id="hSJ-D2-Uue" customClass="WhMineTxRecordsViewController" customModule="WHoleWallet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhMineTxRecordsViewController" title="Transaction Records" id="hSJ-D2-Uue" customClass="WhMineTxRecordsViewController" customModule="WHoleWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AMN-E4-Vpr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1901,6 +1904,7 @@
                         <viewLayoutGuide key="safeArea" id="HRQ-GW-BG8"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Transaction Records" id="YH7-oH-zlt"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -1910,7 +1914,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euA-qJ-3my" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="2330"/>
+            <point key="canvasLocation" x="1081" y="2655"/>
         </scene>
         <!--Transaction Detail-->
         <scene sceneID="qjX-BK-0iY">
@@ -1960,7 +1964,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51O-gq-JU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1666" y="2403"/>
+            <point key="canvasLocation" x="1834" y="2704"/>
         </scene>
         <!--BCH钱包-->
         <scene sceneID="F67-uv-uGT">

@@ -28,19 +28,13 @@
 		19966A602199A9F2000F3376 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A572199A9F2000F3376 /* GCDAsyncUdpSocket.m */; };
 		19966A612199A9F2000F3376 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A582199A9F2000F3376 /* GCDAsyncSocket.m */; };
 		19966A622199A9F2000F3376 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 19966A5B2199A9F2000F3376 /* README.markdown */; };
-		19966A6C2199AA3D000F3376 /* CreateWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A642199AA3D000F3376 /* CreateWalletViewController.swift */; };
-		19966A6D2199AA3D000F3376 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A652199AA3D000F3376 /* SendViewController.swift */; };
 		19966A6E2199AA3D000F3376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A662199AA3D000F3376 /* AppDelegate.swift */; };
 		19966A6F2199AA3D000F3376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19966A672199AA3D000F3376 /* Main.storyboard */; };
 		19966A702199AA3D000F3376 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A682199AA3D000F3376 /* AppController.swift */; };
-		19966A712199AA3D000F3376 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A692199AA3D000F3376 /* SettingsViewController.swift */; };
-		19966A722199AA3D000F3376 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A6A2199AA3D000F3376 /* HomeViewController.swift */; };
-		19966A732199AA3D000F3376 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A6B2199AA3D000F3376 /* ReceiveViewController.swift */; };
 		19966A762199AB6E000F3376 /* WhWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A752199AB6E000F3376 /* WhWallet.swift */; };
 		19966A78219A8C3B000F3376 /* WhAdditionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A77219A8C3B000F3376 /* WhAdditionals.swift */; };
 		19966A79219D22A4000F3376 /* WhAdditionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A77219A8C3B000F3376 /* WhAdditionals.swift */; };
 		19966A7C219D6A8D000F3376 /* UIDevice+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A7B219D6A8D000F3376 /* UIDevice+Helper.m */; };
-		19966A84219E754A000F3376 /* WhWalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A83219E754A000F3376 /* WhWalletManager.swift */; };
 		19966A86219E9D74000F3376 /* blockchain_headers in Resources */ = {isa = PBXBuildFile; fileRef = 19966A85219E9D74000F3376 /* blockchain_headers */; };
 		19966A87219E9D8A000F3376 /* blockchain_headers in Resources */ = {isa = PBXBuildFile; fileRef = 19966A85219E9D74000F3376 /* blockchain_headers */; };
 		19966A89219EAFCC000F3376 /* WhBlockHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A88219EAFCC000F3376 /* WhBlockHeader.swift */; };
@@ -84,6 +78,7 @@
 		19F57FDA21B91049008A5AB2 /* WhJoinCrowdSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FD921B91049008A5AB2 /* WhJoinCrowdSaleViewController.swift */; };
 		19F57FE321C772F3008A5AB2 /* WhTransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FE221C772F3008A5AB2 /* WhTransactionDetailViewController.swift */; };
 		19F57FE521C7A8C0008A5AB2 /* WhWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FE421C7A8C0008A5AB2 /* WhWebViewController.swift */; };
+		19FC35A521C9E3980088E143 /* WhWalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC35A421C9E3980088E143 /* WhWalletManager.swift */; };
 		5F02F7FDADDFCEB12A90BC59 /* Pods_WHoleWalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA83EE68A1F77E7378BD197E /* Pods_WHoleWalletUITests.framework */; };
 		798DA62B5C276383ACE6B772 /* Pods_WHoleWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BCF3D28ED7D593798A0FA8 /* Pods_WHoleWallet.framework */; };
 		84C507AC4202F053F0C94C69 /* Pods_WHoleWalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344AB03E58A104282E52F971 /* Pods_WHoleWalletTests.framework */; };
@@ -143,19 +138,13 @@
 		19966A592199A9F2000F3376 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		19966A5A2199A9F2000F3376 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		19966A5B2199A9F2000F3376 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
-		19966A642199AA3D000F3376 /* CreateWalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWalletViewController.swift; sourceTree = "<group>"; };
-		19966A652199AA3D000F3376 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		19966A662199AA3D000F3376 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19966A672199AA3D000F3376 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		19966A682199AA3D000F3376 /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
-		19966A692199AA3D000F3376 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		19966A6A2199AA3D000F3376 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		19966A6B2199AA3D000F3376 /* ReceiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
 		19966A752199AB6E000F3376 /* WhWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhWallet.swift; sourceTree = "<group>"; };
 		19966A77219A8C3B000F3376 /* WhAdditionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhAdditionals.swift; sourceTree = "<group>"; };
 		19966A7A219D6A8D000F3376 /* UIDevice+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Helper.h"; sourceTree = "<group>"; };
 		19966A7B219D6A8D000F3376 /* UIDevice+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Helper.m"; sourceTree = "<group>"; };
-		19966A83219E754A000F3376 /* WhWalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhWalletManager.swift; sourceTree = "<group>"; };
 		19966A85219E9D74000F3376 /* blockchain_headers */ = {isa = PBXFileReference; lastKnownFileType = file; path = blockchain_headers; sourceTree = "<group>"; };
 		19966A88219EAFCC000F3376 /* WhBlockHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhBlockHeader.swift; sourceTree = "<group>"; };
 		19966A8C219FFF4B000F3376 /* WhCPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhCPTextField.m; sourceTree = "<group>"; };
@@ -196,6 +185,7 @@
 		19F57FD921B91049008A5AB2 /* WhJoinCrowdSaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhJoinCrowdSaleViewController.swift; sourceTree = "<group>"; };
 		19F57FE221C772F3008A5AB2 /* WhTransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhTransactionDetailViewController.swift; sourceTree = "<group>"; };
 		19F57FE421C7A8C0008A5AB2 /* WhWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhWebViewController.swift; sourceTree = "<group>"; };
+		19FC35A421C9E3980088E143 /* WhWalletManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhWalletManager.swift; sourceTree = "<group>"; };
 		344AB03E58A104282E52F971 /* Pods_WHoleWalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WHoleWalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37BCF3D28ED7D593798A0FA8 /* Pods_WHoleWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WHoleWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		455AB3DA178D48414390A2F7 /* Pods-WHoleWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHoleWalletTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WHoleWalletTests/Pods-WHoleWalletTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -388,14 +378,9 @@
 				192EBA7C21AEBB29002F5A97 /* WhAsset */,
 				19966A662199AA3D000F3376 /* AppDelegate.swift */,
 				19F57FBF21B4DA87008A5AB2 /* WhBrowse */,
-				19966A642199AA3D000F3376 /* CreateWalletViewController.swift */,
 				19F57FC421B7A8DF008A5AB2 /* Mine */,
 				19966A682199AA3D000F3376 /* AppController.swift */,
-				19966A6A2199AA3D000F3376 /* HomeViewController.swift */,
 				19966A672199AA3D000F3376 /* Main.storyboard */,
-				19966A6B2199AA3D000F3376 /* ReceiveViewController.swift */,
-				19966A652199AA3D000F3376 /* SendViewController.swift */,
-				19966A692199AA3D000F3376 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -405,7 +390,7 @@
 			children = (
 				19966A752199AB6E000F3376 /* WhWallet.swift */,
 				19966A77219A8C3B000F3376 /* WhAdditionals.swift */,
-				19966A83219E754A000F3376 /* WhWalletManager.swift */,
+				19FC35A421C9E3980088E143 /* WhWalletManager.swift */,
 				197CCA5A21A65BBC0028FEDC /* WhWalletRequestHandler.swift */,
 				19966A88219EAFCC000F3376 /* WhBlockHeader.swift */,
 				19966AA421A3BF5B000F3376 /* WhWalletUtil.swift */,
@@ -783,7 +768,6 @@
 				19966AA721A3CDD0000F3376 /* WhInputMnemonicViewController.swift in Sources */,
 				19F57FB121B24C8B008A5AB2 /* WhChangeIssuerViewController.swift in Sources */,
 				19966AAA21A42823000F3376 /* WhAlertViews.swift in Sources */,
-				19966A6D2199AA3D000F3376 /* SendViewController.swift in Sources */,
 				19F57FCC21B7A9E0008A5AB2 /* WhAboutUsViewController.swift in Sources */,
 				19F57FE521C7A8C0008A5AB2 /* WhWebViewController.swift in Sources */,
 				197CCA6421A7EFF40028FEDC /* WhWalletDetailViewController.swift in Sources */,
@@ -793,8 +777,6 @@
 				19966A9F21A3B384000F3376 /* WhCreateWalletViewController.swift in Sources */,
 				19966A9821A26286000F3376 /* WhMineViewController.swift in Sources */,
 				19F57FB321B24D49008A5AB2 /* WhSendAssetViewController.swift in Sources */,
-				19966A732199AA3D000F3376 /* ReceiveViewController.swift in Sources */,
-				19966A84219E754A000F3376 /* WhWalletManager.swift in Sources */,
 				19F57FD021B7AAEA008A5AB2 /* WhSeeMnemonicViewController.swift in Sources */,
 				192EBA8521AF8E3D002F5A97 /* WhCreateAnAssetViewController.swift in Sources */,
 				199668892199935C000F3376 /* NSObject+Additionals.m in Sources */,
@@ -812,7 +794,6 @@
 				19966A612199A9F2000F3376 /* GCDAsyncSocket.m in Sources */,
 				19966A9A21A277DA000F3376 /* WhWalletCustomView.swift in Sources */,
 				19F57FC621B7A913008A5AB2 /* WhChangeLanguageViewController.swift in Sources */,
-				19966A6C2199AA3D000F3376 /* CreateWalletViewController.swift in Sources */,
 				19966A9621A26255000F3376 /* WhAssetViewController.swift in Sources */,
 				19966AA321A3B3F4000F3376 /* WhImportWalletViewController.swift in Sources */,
 				19966AA521A3BF5B000F3376 /* WhWalletUtil.swift in Sources */,
@@ -824,16 +805,15 @@
 				19F57FB521B24D65008A5AB2 /* WhAirDropAssetViewController.swift in Sources */,
 				19966A5D2199A9F2000F3376 /* WhSocketManager.m in Sources */,
 				19966AA121A3B3D7000F3376 /* WhBackupMnemonicViewController.swift in Sources */,
-				19966A722199AA3D000F3376 /* HomeViewController.swift in Sources */,
 				197CCA5E21A6D41B0028FEDC /* WhNetWorkConfig.m in Sources */,
 				19966A8E219FFF4C000F3376 /* WhCPTextField.m in Sources */,
 				192EBA7E21AEBE0A002F5A97 /* WhCreateAssetViewController.swift in Sources */,
 				19D5D68821B10F6400FFC025 /* WhAssetDetailViewController.swift in Sources */,
 				192EBA7621ABC526002F5A97 /* WhSendViewController.swift in Sources */,
 				19F57FCA21B7A97E008A5AB2 /* WhUserAgreeMentViewController.swift in Sources */,
-				19966A712199AA3D000F3376 /* SettingsViewController.swift in Sources */,
 				19D5D68621B0051B00FFC025 /* WhPopContentViewController.swift in Sources */,
 				19966A7C219D6A8D000F3376 /* UIDevice+Helper.m in Sources */,
+				19FC35A521C9E3980088E143 /* WhWalletManager.swift in Sources */,
 				19966A89219EAFCC000F3376 /* WhBlockHeader.swift in Sources */,
 				19F57FBD21B2937E008A5AB2 /* WhTransferAllViewController.swift in Sources */,
 				197CCA6221A7DC8D0028FEDC /* WhBaseModel.swift in Sources */,

@@ -33,7 +33,7 @@ class WhMineTxRecordsViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         //avoid
         if #available(iOS 11, *) {
             self.tableView.estimatedRowHeight = 0;

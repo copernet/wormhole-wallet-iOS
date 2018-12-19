@@ -56,7 +56,7 @@ public protocol BlockStore {
     func addBlock(_ block: BlockMessage, hash: Data) throws
     func addMerkleBlock(_ merkleBlock: MerkleBlockMessage, hash: Data) throws
     func addTransaction(_ transaction: Transaction, hash: Data) throws
-    func calculateBalance(address: String) throws -> Int64
+    func calculateBalance(address: Address) throws -> Int64
     func latestBlockHash() throws -> Data?
 }
 
@@ -343,7 +343,6 @@ public class SQLiteBlockStore: BlockStore {
         try deleteTransactionInput(txId: hash)
         for input in transaction.inputs {
             try addTransactionInput(input, txId: hash)
-            
         }
         try deleteTransactionOutput(txId: hash)
         for (i, output) in transaction.outputs.enumerated() {
@@ -396,9 +395,9 @@ public class SQLiteBlockStore: BlockStore {
         try execute { sqlite3_reset(stmt) }
     }
 
-    public func calculateBalance(address: String) throws -> Int64 {
+    public func calculateBalance(address: Address) throws -> Int64 {
         let stmt = statements["calculateBalance"]
-        try execute { sqlite3_bind_text(stmt, 1, address, -1, SQLITE_TRANSIENT) }
+        try execute { sqlite3_bind_text(stmt, 1, address.base58, -1, SQLITE_TRANSIENT) }
 
         var balance: Int64 = 0
         while sqlite3_step(stmt) == SQLITE_ROW {
@@ -411,9 +410,9 @@ public class SQLiteBlockStore: BlockStore {
         return balance
     }
 
-    public func transactions(address: String) throws -> [Payment] {
+    public func transactions(address: Address) throws -> [Payment] {
         let stmt = statements["transactions"]
-        try execute { sqlite3_bind_text(stmt, 1, address, -1, SQLITE_TRANSIENT) }
+        try execute { sqlite3_bind_text(stmt, 1, address.base58, -1, SQLITE_TRANSIENT) }
 
         var payments = [Payment]()
         while sqlite3_step(stmt) == SQLITE_ROW {
@@ -429,9 +428,9 @@ public class SQLiteBlockStore: BlockStore {
         return payments
     }
 
-    public func unspentTransactions(address: String) throws -> [Payment] {
+    public func unspentTransactions(address: Address) throws -> [Payment] {
         let stmt = statements["unspentTransactions"]
-        try execute { sqlite3_bind_text(stmt, 1, address, -1, SQLITE_TRANSIENT) }
+        try execute { sqlite3_bind_text(stmt, 1, address.base58, -1, SQLITE_TRANSIENT) }
 
         var payments = [Payment]()
         while sqlite3_step(stmt) == SQLITE_ROW {
