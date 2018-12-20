@@ -116,7 +116,7 @@ public struct WhMerkleVerify{
                 return
             }
             
-            guard txHash == header.hashString || root != header.merkleRoot else {
+            guard root == header.merkleRoot else {
                 verified(txHash,height,false)
                 return
             }

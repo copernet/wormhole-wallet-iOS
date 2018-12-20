@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/BitcoinKit/Sources/BitcoinKit/Core/BlockStore.swift"
-            timestampString = "566909383.4162951"
+            timestampString = "566995668.477047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "376"
@@ -260,11 +260,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Models/WhWalletRequestHandler.swift"
-            timestampString = "566991456.49737"
+            timestampString = "566997140.484393"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "subScribeBlockHeaders()"
             landmarkType = "7">
          </BreakpointContent>
@@ -276,7 +276,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Models/WhBlockHeader.swift"
-            timestampString = "566909779.15725"
+            timestampString = "566997140.484486"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "645"
@@ -468,7 +468,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Models/WhBlockHeader.swift"
-            timestampString = "566909779.157428"
+            timestampString = "566997140.484727"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "731"
@@ -484,7 +484,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Models/WhBlockHeader.swift"
-            timestampString = "566909779.157477"
+            timestampString = "566997140.484789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "667"
@@ -500,7 +500,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Models/WhBlockHeader.swift"
-            timestampString = "566909779.157519"
+            timestampString = "566997140.4848469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "680"
@@ -516,7 +516,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Models/WhBlockHeader.swift"
-            timestampString = "566909779.157568"
+            timestampString = "566997140.484902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "682"
@@ -532,44 +532,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Models/WhWalletRequestHandler.swift"
-            timestampString = "566991456.49801"
+            timestampString = "566997140.4849581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
             endingLineNumber = "58"
             landmarkName = "fetchTranactionHistory()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WHoleWallet/Models/WhBlockHeader.swift"
-            timestampString = "566909779.157709"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "txMerkleVerify(txHash:height:verified:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WHoleWallet/Models/WhBlockHeader.swift"
-            timestampString = "566909779.157751"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "txMerkleVerify(txHash:height:verified:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -644,7 +612,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Controllers/MainTabs/WhSendViewController.swift"
-            timestampString = "566991456.498372"
+            timestampString = "566997140.485165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -660,7 +628,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Models/WhWalletRequestHandler.swift"
-            timestampString = "566991456.498423"
+            timestampString = "566997140.485227"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
@@ -676,7 +644,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Models/WhWalletRequestHandler.swift"
-            timestampString = "566991456.498654"
+            timestampString = "566997140.4852901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
@@ -720,11 +688,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WHoleWallet/Models/WhWalletRequestHandler.swift"
-            timestampString = "566991456.4988821"
+            timestampString = "566997140.485351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"

@@ -83,8 +83,10 @@ public struct WhWalletRequestHandler {
                     //merkle tree verify
                     WhMerkleVerify.txMerkleVerify(txHash: hash, height: height, verified: { (txHash, txHeight, valid) in
                         if !valid {
+                            DLog(message: "hhhash: \(hash)  height: \(height) valid: \(valid)")
                             return
                         }
+                        DLog(message: "hhhash: \(hash)  height: \(height) valid: \(valid)")
                         sm.getTransactionWithAddress(txHash, withResponseBlock: { (transactionObj:WhJSONRPCInterface) in
                             if let hexString = transactionObj.result as? String {
                                 let rawData = hexString.hexToData()!
