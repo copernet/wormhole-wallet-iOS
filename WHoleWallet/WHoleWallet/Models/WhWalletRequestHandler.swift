@@ -57,17 +57,29 @@ public struct WhWalletRequestHandler {
     
     func fetchTranactionHistory()  {
         let sm = WhSocketManager.share()
-        //mnS2geiaHgzxfa6GyXPQ1WhgEGbZyNuuGK
         sm.getConfirmedHistory(withAddress: address) { (historyObj: WhJSONRPCInterface) in
             if let result = historyObj.result as? Array<Dictionary<String, Any>>{
                 guard result.count > 0 else {
                     self.toNotificationSome()
                     return
                 }
-                
+                //local exist transactions
+                let utxos = WhWalletManager.shared.transactions()
                 for (index,dic) in result.enumerated(){
                     let hash = dic["tx_hash"] as! String
                     let height = resPonsedInt(dictionary: dic, key: "height")!
+                    //check does the transaction is exist
+                    var exist = false
+                    for payment in utxos {
+                        if payment.txHash == hash {
+                            exist = true
+                            break
+                        }
+                    }
+                    if exist {//verify next
+                        continue
+                    }
+                    
                     //merkle tree verify
                     WhMerkleVerify.txMerkleVerify(txHash: hash, height: height, verified: { (txHash, txHeight, valid) in
                         if !valid {

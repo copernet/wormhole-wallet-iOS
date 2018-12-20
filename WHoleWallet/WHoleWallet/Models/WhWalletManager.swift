@@ -157,23 +157,36 @@ class WhWalletManager {
     }
     
     //get utxos
-    func transactions() -> [Payment] {
+    func utxos() -> [Payment] {
         let blockStore = try! SQLiteBlockStore.default()
         var payments = [Payment]()
         if let usedAddresses = self.whWallet?.addresses  {
             for address in usedAddresses {
-//                let newPayments = try! blockStore.transactions(address: address)
                 let newPayments = try! blockStore.unspentTransactions(address: address)
                 for p in newPayments where !payments.contains(p){
                     payments.append(p)
                 }
             }
         }
-        
-        for payment in payments {
-            print("\(payment.state == .received ? "received " : "send ")value: \(payment.amount)")
+//        for payment in payments {
+//            print("\(payment.state == .received ? "received " : "send ")value: \(payment.amount)")
+//        }
+        return payments
+    }
+    
+    
+    //get transactions
+    func transactions() -> [Payment] {
+        let blockStore = try! SQLiteBlockStore.default()
+        var payments = [Payment]()
+        if let usedAddresses = self.whWallet?.addresses  {
+            for address in usedAddresses {
+                let newPayments = try! blockStore.transactions(address: address)
+                for p in newPayments where !payments.contains(p){
+                    payments.append(p)
+                }
+            }
         }
-        
         return payments
     }
     

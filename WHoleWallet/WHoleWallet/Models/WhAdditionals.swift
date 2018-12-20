@@ -141,7 +141,6 @@ extension Transaction {
     static let TX_INPUT_SIZE  = 148
     static let TX_OUTPUT_SIZE = 34
     
-    
     static func createMerkleRoot(merklePath:[String],targetHash:String, position:Int) ->String{
         var hashRoot = targetHash.hexToData()!
         hashRoot.reverse()
@@ -161,8 +160,16 @@ extension Transaction {
         return  Int64( 8 + MemoryLayout.size(ofValue: inputCount) + MemoryLayout.size(ofValue: outPutCount) + Transaction.TX_INPUT_SIZE * inputCount +  Transaction.TX_OUTPUT_SIZE * outPutCount )
     }
     
-    
-    
+}
+
+
+extension Payment {
+    var txHash: String {
+        get {
+            let reversed = txid.reversed()
+            return Data(reversed).hexString()
+        }
+    }
 }
 
 

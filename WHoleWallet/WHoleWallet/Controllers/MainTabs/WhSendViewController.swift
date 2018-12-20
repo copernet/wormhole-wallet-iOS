@@ -208,7 +208,7 @@ class WhSendViewController: UIViewController,UITextFieldDelegate {
     
     private func sendToSomeAddress(wallet:HDWallet?, amount: Int64, address: String, feeRate:String) {
         
-        guard let signedTx = WhBitCoinCashTransactionHandler.sendToAddress(wallet: wallet, amount: amount, address: address, payMents: WhWalletManager.shared.transactions(), feeRate: feeRate) else {
+        guard let signedTx = WhBitCoinCashTransactionHandler.sendToAddress(wallet: wallet, amount: amount, address: address, payMents: WhWalletManager.shared.utxos(), feeRate: feeRate) else {
             self.view.makeToast("transaction failed !")
             return
         }

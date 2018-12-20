@@ -7,7 +7,7 @@
 //
 
 import XCTest
-//@testable import WHoleWallet
+@testable import WHoleWallet
 import BitcoinKit
 import CryptoSwift
 
