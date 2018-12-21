@@ -1,0 +1,1159 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		192EBA7621ABC526002F5A97 /* WhSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192EBA7521ABC526002F5A97 /* WhSendViewController.swift */; };
+		192EBA7821ACE567002F5A97 /* WhFireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192EBA7721ACE567002F5A97 /* WhFireViewController.swift */; };
+		192EBA7A21AE2BB5002F5A97 /* WhNetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 197CCA5D21A6D41B0028FEDC /* WhNetWorkConfig.m */; };
+		192EBA7E21AEBE0A002F5A97 /* WhCreateAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192EBA7D21AEBE0A002F5A97 /* WhCreateAssetViewController.swift */; };
+		192EBA8521AF8E3D002F5A97 /* WhCreateAnAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192EBA8421AF8E3D002F5A97 /* WhCreateAnAssetViewController.swift */; };
+		197CCA5B21A65BBC0028FEDC /* WhWalletRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CCA5A21A65BBC0028FEDC /* WhWalletRequestHandler.swift */; };
+		197CCA5E21A6D41B0028FEDC /* WhNetWorkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 197CCA5D21A6D41B0028FEDC /* WhNetWorkConfig.m */; };
+		197CCA6221A7DC8D0028FEDC /* WhBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CCA6121A7DC8D0028FEDC /* WhBaseModel.swift */; };
+		197CCA6421A7EFF40028FEDC /* WhWalletDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197CCA6321A7EFF40028FEDC /* WhWalletDetailViewController.swift */; };
+		1996686021997A78000F3376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1996685F21997A78000F3376 /* Assets.xcassets */; };
+		1996686321997A78000F3376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1996686121997A78000F3376 /* LaunchScreen.storyboard */; };
+		1996686E21997A78000F3376 /* WHoleWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1996686D21997A78000F3376 /* WHoleWalletTests.swift */; };
+		1996687921997A78000F3376 /* WHoleWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1996687821997A78000F3376 /* WHoleWalletUITests.swift */; };
+		199668892199935C000F3376 /* NSObject+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 199668882199935C000F3376 /* NSObject+Additionals.m */; };
+		19966A5C2199A9F2000F3376 /* WhRPCInterfaces.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A4A2199A9F2000F3376 /* WhRPCInterfaces.m */; };
+		19966A5D2199A9F2000F3376 /* WhSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A4C2199A9F2000F3376 /* WhSocketManager.m */; };
+		19966A5E2199A9F2000F3376 /* WhAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A4F2199A9F2000F3376 /* WhAsyncSocket.m */; };
+		19966A5F2199A9F2000F3376 /* NSString+Additionals.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A532199A9F2000F3376 /* NSString+Additionals.m */; };
+		19966A602199A9F2000F3376 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A572199A9F2000F3376 /* GCDAsyncUdpSocket.m */; };
+		19966A612199A9F2000F3376 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A582199A9F2000F3376 /* GCDAsyncSocket.m */; };
+		19966A622199A9F2000F3376 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 19966A5B2199A9F2000F3376 /* README.markdown */; };
+		19966A6E2199AA3D000F3376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A662199AA3D000F3376 /* AppDelegate.swift */; };
+		19966A6F2199AA3D000F3376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19966A672199AA3D000F3376 /* Main.storyboard */; };
+		19966A702199AA3D000F3376 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A682199AA3D000F3376 /* AppController.swift */; };
+		19966A762199AB6E000F3376 /* WhWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A752199AB6E000F3376 /* WhWallet.swift */; };
+		19966A78219A8C3B000F3376 /* WhAdditionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A77219A8C3B000F3376 /* WhAdditionals.swift */; };
+		19966A79219D22A4000F3376 /* WhAdditionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A77219A8C3B000F3376 /* WhAdditionals.swift */; };
+		19966A7C219D6A8D000F3376 /* UIDevice+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A7B219D6A8D000F3376 /* UIDevice+Helper.m */; };
+		19966A86219E9D74000F3376 /* blockchain_headers in Resources */ = {isa = PBXBuildFile; fileRef = 19966A85219E9D74000F3376 /* blockchain_headers */; };
+		19966A87219E9D8A000F3376 /* blockchain_headers in Resources */ = {isa = PBXBuildFile; fileRef = 19966A85219E9D74000F3376 /* blockchain_headers */; };
+		19966A89219EAFCC000F3376 /* WhBlockHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A88219EAFCC000F3376 /* WhBlockHeader.swift */; };
+		19966A8A219EE750000F3376 /* WhBlockHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A88219EAFCC000F3376 /* WhBlockHeader.swift */; };
+		19966A8E219FFF4C000F3376 /* WhCPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A8C219FFF4B000F3376 /* WhCPTextField.m */; };
+		19966A9221A261B8000F3376 /* WhHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A9121A261B8000F3376 /* WhHomeViewController.swift */; };
+		19966A9421A26203000F3376 /* WhBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A9321A26203000F3376 /* WhBrowseViewController.swift */; };
+		19966A9621A26255000F3376 /* WhAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A9521A26255000F3376 /* WhAssetViewController.swift */; };
+		19966A9821A26286000F3376 /* WhMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A9721A26286000F3376 /* WhMineViewController.swift */; };
+		19966A9A21A277DA000F3376 /* WhWalletCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A9921A277DA000F3376 /* WhWalletCustomView.swift */; };
+		19966A9D21A2EA28000F3376 /* CreateWallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19966A9C21A2EA28000F3376 /* CreateWallet.storyboard */; };
+		19966A9F21A3B384000F3376 /* WhCreateWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966A9E21A3B384000F3376 /* WhCreateWalletViewController.swift */; };
+		19966AA121A3B3D7000F3376 /* WhBackupMnemonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966AA021A3B3D7000F3376 /* WhBackupMnemonicViewController.swift */; };
+		19966AA321A3B3F4000F3376 /* WhImportWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966AA221A3B3F4000F3376 /* WhImportWalletViewController.swift */; };
+		19966AA521A3BF5B000F3376 /* WhWalletUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966AA421A3BF5B000F3376 /* WhWalletUtil.swift */; };
+		19966AA721A3CDD0000F3376 /* WhInputMnemonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966AA621A3CDD0000F3376 /* WhInputMnemonicViewController.swift */; };
+		19966AA821A4124E000F3376 /* WhWalletUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966AA421A3BF5B000F3376 /* WhWalletUtil.swift */; };
+		19966AAA21A42823000F3376 /* WhAlertViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966AA921A42823000F3376 /* WhAlertViews.swift */; };
+		19966AAD21A4ECEC000F3376 /* WhScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966AAC21A4ECEC000F3376 /* WhScannerViewController.swift */; };
+		19966AAF21A563AC000F3376 /* WhWalletManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19966AAE21A563AC000F3376 /* WhWalletManageViewController.swift */; };
+		19966AB021A655D1000F3376 /* WhSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19966A4C2199A9F2000F3376 /* WhSocketManager.m */; };
+		19D5D68621B0051B00FFC025 /* WhPopContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5D68521B0051B00FFC025 /* WhPopContentViewController.swift */; };
+		19D5D68821B10F6400FFC025 /* WhAssetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5D68721B10F6400FFC025 /* WhAssetDetailViewController.swift */; };
+		19F57FB121B24C8B008A5AB2 /* WhChangeIssuerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FB021B24C8B008A5AB2 /* WhChangeIssuerViewController.swift */; };
+		19F57FB321B24D49008A5AB2 /* WhSendAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FB221B24D49008A5AB2 /* WhSendAssetViewController.swift */; };
+		19F57FB521B24D65008A5AB2 /* WhAirDropAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FB421B24D65008A5AB2 /* WhAirDropAssetViewController.swift */; };
+		19F57FB721B24D78008A5AB2 /* WhGrantAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FB621B24D78008A5AB2 /* WhGrantAssetViewController.swift */; };
+		19F57FB921B24D8C008A5AB2 /* WhDestroyAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FB821B24D8C008A5AB2 /* WhDestroyAssetViewController.swift */; };
+		19F57FBB21B24D98008A5AB2 /* WhCloseAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FBA21B24D98008A5AB2 /* WhCloseAssetViewController.swift */; };
+		19F57FBD21B2937E008A5AB2 /* WhTransferAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FBC21B2937E008A5AB2 /* WhTransferAllViewController.swift */; };
+		19F57FC121B4DAD9008A5AB2 /* WhBrowseAllAssetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FC021B4DAD9008A5AB2 /* WhBrowseAllAssetViewController.swift */; };
+		19F57FC321B4DCD8008A5AB2 /* WhValidCrowdSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FC221B4DCD8008A5AB2 /* WhValidCrowdSaleViewController.swift */; };
+		19F57FC621B7A913008A5AB2 /* WhChangeLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FC521B7A913008A5AB2 /* WhChangeLanguageViewController.swift */; };
+		19F57FC821B7A92E008A5AB2 /* WhChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FC721B7A92E008A5AB2 /* WhChangePasswordViewController.swift */; };
+		19F57FCA21B7A97E008A5AB2 /* WhUserAgreeMentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FC921B7A97E008A5AB2 /* WhUserAgreeMentViewController.swift */; };
+		19F57FCC21B7A9E0008A5AB2 /* WhAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FCB21B7A9E0008A5AB2 /* WhAboutUsViewController.swift */; };
+		19F57FCE21B7AA86008A5AB2 /* WhTxDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FCD21B7AA86008A5AB2 /* WhTxDetailViewController.swift */; };
+		19F57FD021B7AAEA008A5AB2 /* WhSeeMnemonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FCF21B7AAEA008A5AB2 /* WhSeeMnemonicViewController.swift */; };
+		19F57FD221B7AB8F008A5AB2 /* WhMineTxRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FD121B7AB8F008A5AB2 /* WhMineTxRecordsViewController.swift */; };
+		19F57FD421B7ABA5008A5AB2 /* WhNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FD321B7ABA5008A5AB2 /* WhNotificationViewController.swift */; };
+		19F57FDA21B91049008A5AB2 /* WhJoinCrowdSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FD921B91049008A5AB2 /* WhJoinCrowdSaleViewController.swift */; };
+		19F57FE321C772F3008A5AB2 /* WhTransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FE221C772F3008A5AB2 /* WhTransactionDetailViewController.swift */; };
+		19F57FE521C7A8C0008A5AB2 /* WhWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F57FE421C7A8C0008A5AB2 /* WhWebViewController.swift */; };
+		19FC35A521C9E3980088E143 /* WhWalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC35A421C9E3980088E143 /* WhWalletManager.swift */; };
+		5F02F7FDADDFCEB12A90BC59 /* Pods_WHoleWalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA83EE68A1F77E7378BD197E /* Pods_WHoleWalletUITests.framework */; };
+		798DA62B5C276383ACE6B772 /* Pods_WHoleWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37BCF3D28ED7D593798A0FA8 /* Pods_WHoleWallet.framework */; };
+		84C507AC4202F053F0C94C69 /* Pods_WHoleWalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344AB03E58A104282E52F971 /* Pods_WHoleWalletTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1996686A21997A78000F3376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1996684D21997A6E000F3376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1996685421997A6E000F3376;
+			remoteInfo = WHoleWallet;
+		};
+		1996687521997A78000F3376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1996684D21997A6E000F3376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1996685421997A6E000F3376;
+			remoteInfo = WHoleWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		192EBA7521ABC526002F5A97 /* WhSendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhSendViewController.swift; sourceTree = "<group>"; };
+		192EBA7721ACE567002F5A97 /* WhFireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhFireViewController.swift; sourceTree = "<group>"; };
+		192EBA7D21AEBE0A002F5A97 /* WhCreateAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhCreateAssetViewController.swift; sourceTree = "<group>"; };
+		192EBA8421AF8E3D002F5A97 /* WhCreateAnAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhCreateAnAssetViewController.swift; sourceTree = "<group>"; };
+		197CCA5A21A65BBC0028FEDC /* WhWalletRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhWalletRequestHandler.swift; sourceTree = "<group>"; };
+		197CCA5C21A6D41B0028FEDC /* WhNetWorkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhNetWorkConfig.h; sourceTree = "<group>"; };
+		197CCA5D21A6D41B0028FEDC /* WhNetWorkConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhNetWorkConfig.m; sourceTree = "<group>"; };
+		197CCA6121A7DC8D0028FEDC /* WhBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhBaseModel.swift; sourceTree = "<group>"; };
+		197CCA6321A7EFF40028FEDC /* WhWalletDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhWalletDetailViewController.swift; sourceTree = "<group>"; };
+		1996685521997A6E000F3376 /* WHoleWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHoleWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1996685F21997A78000F3376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1996686221997A78000F3376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1996686421997A78000F3376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1996686921997A78000F3376 /* WHoleWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WHoleWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1996686D21997A78000F3376 /* WHoleWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHoleWalletTests.swift; sourceTree = "<group>"; };
+		1996686F21997A78000F3376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1996687421997A78000F3376 /* WHoleWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WHoleWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1996687821997A78000F3376 /* WHoleWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHoleWalletUITests.swift; sourceTree = "<group>"; };
+		1996687A21997A78000F3376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		199668862199935B000F3376 /* WHoleWallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WHoleWallet-Bridging-Header.h"; sourceTree = "<group>"; };
+		199668872199935C000F3376 /* NSObject+Additionals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Additionals.h"; sourceTree = "<group>"; };
+		199668882199935C000F3376 /* NSObject+Additionals.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additionals.m"; sourceTree = "<group>"; };
+		19966A4A2199A9F2000F3376 /* WhRPCInterfaces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhRPCInterfaces.m; sourceTree = "<group>"; };
+		19966A4B2199A9F2000F3376 /* WhAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhAsyncSocket.h; sourceTree = "<group>"; };
+		19966A4C2199A9F2000F3376 /* WhSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhSocketManager.m; sourceTree = "<group>"; };
+		19966A4D2199A9F2000F3376 /* WhRPCInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhRPCInterfaces.h; sourceTree = "<group>"; };
+		19966A4E2199A9F2000F3376 /* WhSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhSocketManager.h; sourceTree = "<group>"; };
+		19966A4F2199A9F2000F3376 /* WhAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhAsyncSocket.m; sourceTree = "<group>"; };
+		19966A502199A9F2000F3376 /* WhWalletHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhWalletHeader.h; sourceTree = "<group>"; };
+		19966A522199A9F2000F3376 /* NSString+Additionals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additionals.h"; sourceTree = "<group>"; };
+		19966A532199A9F2000F3376 /* NSString+Additionals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additionals.m"; sourceTree = "<group>"; };
+		19966A572199A9F2000F3376 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		19966A582199A9F2000F3376 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		19966A592199A9F2000F3376 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		19966A5A2199A9F2000F3376 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		19966A5B2199A9F2000F3376 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		19966A662199AA3D000F3376 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19966A672199AA3D000F3376 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		19966A682199AA3D000F3376 /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		19966A752199AB6E000F3376 /* WhWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhWallet.swift; sourceTree = "<group>"; };
+		19966A77219A8C3B000F3376 /* WhAdditionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhAdditionals.swift; sourceTree = "<group>"; };
+		19966A7A219D6A8D000F3376 /* UIDevice+Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Helper.h"; sourceTree = "<group>"; };
+		19966A7B219D6A8D000F3376 /* UIDevice+Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Helper.m"; sourceTree = "<group>"; };
+		19966A85219E9D74000F3376 /* blockchain_headers */ = {isa = PBXFileReference; lastKnownFileType = file; path = blockchain_headers; sourceTree = "<group>"; };
+		19966A88219EAFCC000F3376 /* WhBlockHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhBlockHeader.swift; sourceTree = "<group>"; };
+		19966A8C219FFF4B000F3376 /* WhCPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhCPTextField.m; sourceTree = "<group>"; };
+		19966A8D219FFF4C000F3376 /* WhCPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhCPTextField.h; sourceTree = "<group>"; };
+		19966A9121A261B8000F3376 /* WhHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhHomeViewController.swift; sourceTree = "<group>"; };
+		19966A9321A26203000F3376 /* WhBrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhBrowseViewController.swift; sourceTree = "<group>"; };
+		19966A9521A26255000F3376 /* WhAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhAssetViewController.swift; sourceTree = "<group>"; };
+		19966A9721A26286000F3376 /* WhMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhMineViewController.swift; sourceTree = "<group>"; };
+		19966A9921A277DA000F3376 /* WhWalletCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhWalletCustomView.swift; sourceTree = "<group>"; };
+		19966A9C21A2EA28000F3376 /* CreateWallet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateWallet.storyboard; sourceTree = "<group>"; };
+		19966A9E21A3B384000F3376 /* WhCreateWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhCreateWalletViewController.swift; sourceTree = "<group>"; };
+		19966AA021A3B3D7000F3376 /* WhBackupMnemonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhBackupMnemonicViewController.swift; sourceTree = "<group>"; };
+		19966AA221A3B3F4000F3376 /* WhImportWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhImportWalletViewController.swift; sourceTree = "<group>"; };
+		19966AA421A3BF5B000F3376 /* WhWalletUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhWalletUtil.swift; sourceTree = "<group>"; };
+		19966AA621A3CDD0000F3376 /* WhInputMnemonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhInputMnemonicViewController.swift; sourceTree = "<group>"; };
+		19966AA921A42823000F3376 /* WhAlertViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhAlertViews.swift; sourceTree = "<group>"; };
+		19966AAC21A4ECEC000F3376 /* WhScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhScannerViewController.swift; sourceTree = "<group>"; };
+		19966AAE21A563AC000F3376 /* WhWalletManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhWalletManageViewController.swift; sourceTree = "<group>"; };
+		19D5D68521B0051B00FFC025 /* WhPopContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhPopContentViewController.swift; sourceTree = "<group>"; };
+		19D5D68721B10F6400FFC025 /* WhAssetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhAssetDetailViewController.swift; sourceTree = "<group>"; };
+		19F57FB021B24C8B008A5AB2 /* WhChangeIssuerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhChangeIssuerViewController.swift; sourceTree = "<group>"; };
+		19F57FB221B24D49008A5AB2 /* WhSendAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhSendAssetViewController.swift; sourceTree = "<group>"; };
+		19F57FB421B24D65008A5AB2 /* WhAirDropAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhAirDropAssetViewController.swift; sourceTree = "<group>"; };
+		19F57FB621B24D78008A5AB2 /* WhGrantAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhGrantAssetViewController.swift; sourceTree = "<group>"; };
+		19F57FB821B24D8C008A5AB2 /* WhDestroyAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhDestroyAssetViewController.swift; sourceTree = "<group>"; };
+		19F57FBA21B24D98008A5AB2 /* WhCloseAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhCloseAssetViewController.swift; sourceTree = "<group>"; };
+		19F57FBC21B2937E008A5AB2 /* WhTransferAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhTransferAllViewController.swift; sourceTree = "<group>"; };
+		19F57FC021B4DAD9008A5AB2 /* WhBrowseAllAssetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhBrowseAllAssetViewController.swift; sourceTree = "<group>"; };
+		19F57FC221B4DCD8008A5AB2 /* WhValidCrowdSaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhValidCrowdSaleViewController.swift; sourceTree = "<group>"; };
+		19F57FC521B7A913008A5AB2 /* WhChangeLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhChangeLanguageViewController.swift; sourceTree = "<group>"; };
+		19F57FC721B7A92E008A5AB2 /* WhChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhChangePasswordViewController.swift; sourceTree = "<group>"; };
+		19F57FC921B7A97E008A5AB2 /* WhUserAgreeMentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhUserAgreeMentViewController.swift; sourceTree = "<group>"; };
+		19F57FCB21B7A9E0008A5AB2 /* WhAboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhAboutUsViewController.swift; sourceTree = "<group>"; };
+		19F57FCD21B7AA86008A5AB2 /* WhTxDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhTxDetailViewController.swift; sourceTree = "<group>"; };
+		19F57FCF21B7AAEA008A5AB2 /* WhSeeMnemonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhSeeMnemonicViewController.swift; sourceTree = "<group>"; };
+		19F57FD121B7AB8F008A5AB2 /* WhMineTxRecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhMineTxRecordsViewController.swift; sourceTree = "<group>"; };
+		19F57FD321B7ABA5008A5AB2 /* WhNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhNotificationViewController.swift; sourceTree = "<group>"; };
+		19F57FD921B91049008A5AB2 /* WhJoinCrowdSaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhJoinCrowdSaleViewController.swift; sourceTree = "<group>"; };
+		19F57FE221C772F3008A5AB2 /* WhTransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhTransactionDetailViewController.swift; sourceTree = "<group>"; };
+		19F57FE421C7A8C0008A5AB2 /* WhWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhWebViewController.swift; sourceTree = "<group>"; };
+		19FC35A421C9E3980088E143 /* WhWalletManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhWalletManager.swift; sourceTree = "<group>"; };
+		344AB03E58A104282E52F971 /* Pods_WHoleWalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WHoleWalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37BCF3D28ED7D593798A0FA8 /* Pods_WHoleWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WHoleWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455AB3DA178D48414390A2F7 /* Pods-WHoleWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHoleWalletTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WHoleWalletTests/Pods-WHoleWalletTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E6FE3B20AB787057D5ABBF2 /* Pods-WHoleWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHoleWalletUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WHoleWalletUITests/Pods-WHoleWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		765B450A5614583F16CA35D5 /* Pods-WHoleWalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHoleWalletUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WHoleWalletUITests/Pods-WHoleWalletUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8607A2C9EF5CEEA11AFB4AD4 /* Pods-WHoleWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHoleWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-WHoleWallet/Pods-WHoleWallet.release.xcconfig"; sourceTree = "<group>"; };
+		A06FB96522F71399E927A3E8 /* Pods-WHoleWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHoleWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WHoleWallet/Pods-WHoleWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		BA83EE68A1F77E7378BD197E /* Pods_WHoleWalletUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WHoleWalletUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4767A5DD32F9A05EB84714D /* Pods-WHoleWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHoleWalletTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WHoleWalletTests/Pods-WHoleWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1996685221997A6E000F3376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				798DA62B5C276383ACE6B772 /* Pods_WHoleWallet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1996686621997A78000F3376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C507AC4202F053F0C94C69 /* Pods_WHoleWalletTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1996687121997A78000F3376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F02F7FDADDFCEB12A90BC59 /* Pods_WHoleWalletUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		192EBA7C21AEBB29002F5A97 /* WhAsset */ = {
+			isa = PBXGroup;
+			children = (
+				192EBA7D21AEBE0A002F5A97 /* WhCreateAssetViewController.swift */,
+				192EBA8421AF8E3D002F5A97 /* WhCreateAnAssetViewController.swift */,
+				19D5D68521B0051B00FFC025 /* WhPopContentViewController.swift */,
+				19D5D68721B10F6400FFC025 /* WhAssetDetailViewController.swift */,
+				19F57FB021B24C8B008A5AB2 /* WhChangeIssuerViewController.swift */,
+				19F57FB221B24D49008A5AB2 /* WhSendAssetViewController.swift */,
+				19F57FB421B24D65008A5AB2 /* WhAirDropAssetViewController.swift */,
+				19F57FB621B24D78008A5AB2 /* WhGrantAssetViewController.swift */,
+				19F57FB821B24D8C008A5AB2 /* WhDestroyAssetViewController.swift */,
+				19F57FBA21B24D98008A5AB2 /* WhCloseAssetViewController.swift */,
+				19F57FBC21B2937E008A5AB2 /* WhTransferAllViewController.swift */,
+				19F57FD921B91049008A5AB2 /* WhJoinCrowdSaleViewController.swift */,
+				19F57FE421C7A8C0008A5AB2 /* WhWebViewController.swift */,
+			);
+			path = WhAsset;
+			sourceTree = "<group>";
+		};
+		1996684C21997A6E000F3376 = {
+			isa = PBXGroup;
+			children = (
+				1996685721997A6E000F3376 /* WHoleWallet */,
+				1996686C21997A78000F3376 /* WHoleWalletTests */,
+				1996687721997A78000F3376 /* WHoleWalletUITests */,
+				1996685621997A6E000F3376 /* Products */,
+				90AC4E595BB6230D3F2F014A /* Pods */,
+				6D0E3C61B4719E03B74C53AA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1996685621997A6E000F3376 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1996685521997A6E000F3376 /* WHoleWallet.app */,
+				1996686921997A78000F3376 /* WHoleWalletTests.xctest */,
+				1996687421997A78000F3376 /* WHoleWalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1996685721997A6E000F3376 /* WHoleWallet */ = {
+			isa = PBXGroup;
+			children = (
+				19966A8B219FFF08000F3376 /* Views */,
+				19966A80219E721C000F3376 /* Resources */,
+				19966A742199AB4C000F3376 /* Models */,
+				19966A632199AA25000F3376 /* Controllers */,
+				19966A482199A9F2000F3376 /* Objective_C */,
+				1996685F21997A78000F3376 /* Assets.xcassets */,
+				1996686121997A78000F3376 /* LaunchScreen.storyboard */,
+				1996686421997A78000F3376 /* Info.plist */,
+				199668872199935C000F3376 /* NSObject+Additionals.h */,
+				199668882199935C000F3376 /* NSObject+Additionals.m */,
+				199668862199935B000F3376 /* WHoleWallet-Bridging-Header.h */,
+			);
+			path = WHoleWallet;
+			sourceTree = "<group>";
+		};
+		1996686C21997A78000F3376 /* WHoleWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				1996686D21997A78000F3376 /* WHoleWalletTests.swift */,
+				1996686F21997A78000F3376 /* Info.plist */,
+			);
+			path = WHoleWalletTests;
+			sourceTree = "<group>";
+		};
+		1996687721997A78000F3376 /* WHoleWalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1996687821997A78000F3376 /* WHoleWalletUITests.swift */,
+				1996687A21997A78000F3376 /* Info.plist */,
+			);
+			path = WHoleWalletUITests;
+			sourceTree = "<group>";
+		};
+		19966A482199A9F2000F3376 /* Objective_C */ = {
+			isa = PBXGroup;
+			children = (
+				19966A492199A9F2000F3376 /* WhSocket */,
+				19966A512199A9F2000F3376 /* Utils */,
+				19966A542199A9F2000F3376 /* CocoaAsyncSocket */,
+			);
+			path = Objective_C;
+			sourceTree = "<group>";
+		};
+		19966A492199A9F2000F3376 /* WhSocket */ = {
+			isa = PBXGroup;
+			children = (
+				19966A4B2199A9F2000F3376 /* WhAsyncSocket.h */,
+				19966A4F2199A9F2000F3376 /* WhAsyncSocket.m */,
+				19966A4D2199A9F2000F3376 /* WhRPCInterfaces.h */,
+				19966A4A2199A9F2000F3376 /* WhRPCInterfaces.m */,
+				19966A4E2199A9F2000F3376 /* WhSocketManager.h */,
+				19966A4C2199A9F2000F3376 /* WhSocketManager.m */,
+				19966A502199A9F2000F3376 /* WhWalletHeader.h */,
+				197CCA5C21A6D41B0028FEDC /* WhNetWorkConfig.h */,
+				197CCA5D21A6D41B0028FEDC /* WhNetWorkConfig.m */,
+			);
+			path = WhSocket;
+			sourceTree = "<group>";
+		};
+		19966A512199A9F2000F3376 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				19966A522199A9F2000F3376 /* NSString+Additionals.h */,
+				19966A532199A9F2000F3376 /* NSString+Additionals.m */,
+				19966A7A219D6A8D000F3376 /* UIDevice+Helper.h */,
+				19966A7B219D6A8D000F3376 /* UIDevice+Helper.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		19966A542199A9F2000F3376 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				19966A552199A9F2000F3376 /* Source */,
+				19966A5B2199A9F2000F3376 /* README.markdown */,
+			);
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		19966A552199A9F2000F3376 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				19966A562199A9F2000F3376 /* GCD */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		19966A562199A9F2000F3376 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				19966A572199A9F2000F3376 /* GCDAsyncUdpSocket.m */,
+				19966A582199A9F2000F3376 /* GCDAsyncSocket.m */,
+				19966A592199A9F2000F3376 /* GCDAsyncUdpSocket.h */,
+				19966A5A2199A9F2000F3376 /* GCDAsyncSocket.h */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		19966A632199AA25000F3376 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				19F57FE121C77278008A5AB2 /* History */,
+				19966AAB21A4ECC1000F3376 /* BitCoinCash */,
+				19966A9B21A2E259000F3376 /* CreateWallet */,
+				19966A9021A26189000F3376 /* MainTabs */,
+				192EBA7C21AEBB29002F5A97 /* WhAsset */,
+				19966A662199AA3D000F3376 /* AppDelegate.swift */,
+				19F57FBF21B4DA87008A5AB2 /* WhBrowse */,
+				19F57FC421B7A8DF008A5AB2 /* Mine */,
+				19966A682199AA3D000F3376 /* AppController.swift */,
+				19966A672199AA3D000F3376 /* Main.storyboard */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		19966A742199AB4C000F3376 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				19966A752199AB6E000F3376 /* WhWallet.swift */,
+				19966A77219A8C3B000F3376 /* WhAdditionals.swift */,
+				19FC35A421C9E3980088E143 /* WhWalletManager.swift */,
+				197CCA5A21A65BBC0028FEDC /* WhWalletRequestHandler.swift */,
+				19966A88219EAFCC000F3376 /* WhBlockHeader.swift */,
+				19966AA421A3BF5B000F3376 /* WhWalletUtil.swift */,
+				197CCA6121A7DC8D0028FEDC /* WhBaseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		19966A80219E721C000F3376 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19966A85219E9D74000F3376 /* blockchain_headers */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		19966A8B219FFF08000F3376 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19966A8D219FFF4C000F3376 /* WhCPTextField.h */,
+				19966A8C219FFF4B000F3376 /* WhCPTextField.m */,
+				19966A9921A277DA000F3376 /* WhWalletCustomView.swift */,
+				19966AA921A42823000F3376 /* WhAlertViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		19966A9021A26189000F3376 /* MainTabs */ = {
+			isa = PBXGroup;
+			children = (
+				19966A9121A261B8000F3376 /* WhHomeViewController.swift */,
+				19966A9321A26203000F3376 /* WhBrowseViewController.swift */,
+				19966A9521A26255000F3376 /* WhAssetViewController.swift */,
+				19966A9721A26286000F3376 /* WhMineViewController.swift */,
+				197CCA6321A7EFF40028FEDC /* WhWalletDetailViewController.swift */,
+				192EBA7521ABC526002F5A97 /* WhSendViewController.swift */,
+				192EBA7721ACE567002F5A97 /* WhFireViewController.swift */,
+			);
+			path = MainTabs;
+			sourceTree = "<group>";
+		};
+		19966A9B21A2E259000F3376 /* CreateWallet */ = {
+			isa = PBXGroup;
+			children = (
+				19966A9C21A2EA28000F3376 /* CreateWallet.storyboard */,
+				19966A9E21A3B384000F3376 /* WhCreateWalletViewController.swift */,
+				19966AA021A3B3D7000F3376 /* WhBackupMnemonicViewController.swift */,
+				19966AA621A3CDD0000F3376 /* WhInputMnemonicViewController.swift */,
+				19966AA221A3B3F4000F3376 /* WhImportWalletViewController.swift */,
+			);
+			path = CreateWallet;
+			sourceTree = "<group>";
+		};
+		19966AAB21A4ECC1000F3376 /* BitCoinCash */ = {
+			isa = PBXGroup;
+			children = (
+				19966AAC21A4ECEC000F3376 /* WhScannerViewController.swift */,
+				19966AAE21A563AC000F3376 /* WhWalletManageViewController.swift */,
+			);
+			path = BitCoinCash;
+			sourceTree = "<group>";
+		};
+		19F57FBF21B4DA87008A5AB2 /* WhBrowse */ = {
+			isa = PBXGroup;
+			children = (
+				19F57FC021B4DAD9008A5AB2 /* WhBrowseAllAssetViewController.swift */,
+				19F57FC221B4DCD8008A5AB2 /* WhValidCrowdSaleViewController.swift */,
+			);
+			path = WhBrowse;
+			sourceTree = "<group>";
+		};
+		19F57FC421B7A8DF008A5AB2 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				19F57FC521B7A913008A5AB2 /* WhChangeLanguageViewController.swift */,
+				19F57FC721B7A92E008A5AB2 /* WhChangePasswordViewController.swift */,
+				19F57FC921B7A97E008A5AB2 /* WhUserAgreeMentViewController.swift */,
+				19F57FCB21B7A9E0008A5AB2 /* WhAboutUsViewController.swift */,
+				19F57FCD21B7AA86008A5AB2 /* WhTxDetailViewController.swift */,
+				19F57FCF21B7AAEA008A5AB2 /* WhSeeMnemonicViewController.swift */,
+				19F57FD121B7AB8F008A5AB2 /* WhMineTxRecordsViewController.swift */,
+				19F57FD321B7ABA5008A5AB2 /* WhNotificationViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		19F57FE121C77278008A5AB2 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				19F57FE221C772F3008A5AB2 /* WhTransactionDetailViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		6D0E3C61B4719E03B74C53AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37BCF3D28ED7D593798A0FA8 /* Pods_WHoleWallet.framework */,
+				344AB03E58A104282E52F971 /* Pods_WHoleWalletTests.framework */,
+				BA83EE68A1F77E7378BD197E /* Pods_WHoleWalletUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90AC4E595BB6230D3F2F014A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A06FB96522F71399E927A3E8 /* Pods-WHoleWallet.debug.xcconfig */,
+				8607A2C9EF5CEEA11AFB4AD4 /* Pods-WHoleWallet.release.xcconfig */,
+				C4767A5DD32F9A05EB84714D /* Pods-WHoleWalletTests.debug.xcconfig */,
+				455AB3DA178D48414390A2F7 /* Pods-WHoleWalletTests.release.xcconfig */,
+				4E6FE3B20AB787057D5ABBF2 /* Pods-WHoleWalletUITests.debug.xcconfig */,
+				765B450A5614583F16CA35D5 /* Pods-WHoleWalletUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1996685421997A6E000F3376 /* WHoleWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1996687D21997A78000F3376 /* Build configuration list for PBXNativeTarget "WHoleWallet" */;
+			buildPhases = (
+				F32DB501E62B10B175CB4C78 /* [CP] Check Pods Manifest.lock */,
+				1996685121997A6E000F3376 /* Sources */,
+				1996685221997A6E000F3376 /* Frameworks */,
+				1996685321997A6E000F3376 /* Resources */,
+				9DB86FE05673B979AA4BD651 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WHoleWallet;
+			productName = WHoleWallet;
+			productReference = 1996685521997A6E000F3376 /* WHoleWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1996686821997A78000F3376 /* WHoleWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1996688021997A78000F3376 /* Build configuration list for PBXNativeTarget "WHoleWalletTests" */;
+			buildPhases = (
+				BD34CF4A26ADCB52809474E1 /* [CP] Check Pods Manifest.lock */,
+				1996686521997A78000F3376 /* Sources */,
+				1996686621997A78000F3376 /* Frameworks */,
+				1996686721997A78000F3376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1996686B21997A78000F3376 /* PBXTargetDependency */,
+			);
+			name = WHoleWalletTests;
+			productName = WHoleWalletTests;
+			productReference = 1996686921997A78000F3376 /* WHoleWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1996687321997A78000F3376 /* WHoleWalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1996688321997A78000F3376 /* Build configuration list for PBXNativeTarget "WHoleWalletUITests" */;
+			buildPhases = (
+				A2C76FBF16D228FB350EC603 /* [CP] Check Pods Manifest.lock */,
+				1996687021997A78000F3376 /* Sources */,
+				1996687121997A78000F3376 /* Frameworks */,
+				1996687221997A78000F3376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1996687621997A78000F3376 /* PBXTargetDependency */,
+			);
+			name = WHoleWalletUITests;
+			productName = WHoleWalletUITests;
+			productReference = 1996687421997A78000F3376 /* WHoleWalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1996684D21997A6E000F3376 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = wormhole;
+				TargetAttributes = {
+					1996685421997A6E000F3376 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					1996686821997A78000F3376 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 1996685421997A6E000F3376;
+					};
+					1996687321997A78000F3376 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 1996685421997A6E000F3376;
+					};
+				};
+			};
+			buildConfigurationList = 1996685021997A6E000F3376 /* Build configuration list for PBXProject "WHoleWallet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1996684C21997A6E000F3376;
+			productRefGroup = 1996685621997A6E000F3376 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1996685421997A6E000F3376 /* WHoleWallet */,
+				1996686821997A78000F3376 /* WHoleWalletTests */,
+				1996687321997A78000F3376 /* WHoleWalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1996685321997A6E000F3376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1996686321997A78000F3376 /* LaunchScreen.storyboard in Resources */,
+				19966A9D21A2EA28000F3376 /* CreateWallet.storyboard in Resources */,
+				19966A86219E9D74000F3376 /* blockchain_headers in Resources */,
+				1996686021997A78000F3376 /* Assets.xcassets in Resources */,
+				19966A622199A9F2000F3376 /* README.markdown in Resources */,
+				19966A6F2199AA3D000F3376 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1996686721997A78000F3376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19966A87219E9D8A000F3376 /* blockchain_headers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1996687221997A78000F3376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DB86FE05673B979AA4BD651 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WHoleWallet/Pods-WHoleWallet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BitcoinKit/BitcoinKit.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MMPopupView/MMPopupView.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BitcoinKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMPopupView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WHoleWallet/Pods-WHoleWallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2C76FBF16D228FB350EC603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WHoleWalletUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD34CF4A26ADCB52809474E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WHoleWalletTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F32DB501E62B10B175CB4C78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WHoleWallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1996685121997A6E000F3376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19966AAD21A4ECEC000F3376 /* WhScannerViewController.swift in Sources */,
+				19966A5F2199A9F2000F3376 /* NSString+Additionals.m in Sources */,
+				19F57FC121B4DAD9008A5AB2 /* WhBrowseAllAssetViewController.swift in Sources */,
+				19966A5E2199A9F2000F3376 /* WhAsyncSocket.m in Sources */,
+				19F57FC821B7A92E008A5AB2 /* WhChangePasswordViewController.swift in Sources */,
+				19F57FE321C772F3008A5AB2 /* WhTransactionDetailViewController.swift in Sources */,
+				19966AA721A3CDD0000F3376 /* WhInputMnemonicViewController.swift in Sources */,
+				19F57FB121B24C8B008A5AB2 /* WhChangeIssuerViewController.swift in Sources */,
+				19966AAA21A42823000F3376 /* WhAlertViews.swift in Sources */,
+				19F57FCC21B7A9E0008A5AB2 /* WhAboutUsViewController.swift in Sources */,
+				19F57FE521C7A8C0008A5AB2 /* WhWebViewController.swift in Sources */,
+				197CCA6421A7EFF40028FEDC /* WhWalletDetailViewController.swift in Sources */,
+				19966A5C2199A9F2000F3376 /* WhRPCInterfaces.m in Sources */,
+				19F57FCE21B7AA86008A5AB2 /* WhTxDetailViewController.swift in Sources */,
+				19F57FB921B24D8C008A5AB2 /* WhDestroyAssetViewController.swift in Sources */,
+				19966A9F21A3B384000F3376 /* WhCreateWalletViewController.swift in Sources */,
+				19966A9821A26286000F3376 /* WhMineViewController.swift in Sources */,
+				19F57FB321B24D49008A5AB2 /* WhSendAssetViewController.swift in Sources */,
+				19F57FD021B7AAEA008A5AB2 /* WhSeeMnemonicViewController.swift in Sources */,
+				192EBA8521AF8E3D002F5A97 /* WhCreateAnAssetViewController.swift in Sources */,
+				199668892199935C000F3376 /* NSObject+Additionals.m in Sources */,
+				19F57FBB21B24D98008A5AB2 /* WhCloseAssetViewController.swift in Sources */,
+				19966A762199AB6E000F3376 /* WhWallet.swift in Sources */,
+				19966A702199AA3D000F3376 /* AppController.swift in Sources */,
+				19F57FB721B24D78008A5AB2 /* WhGrantAssetViewController.swift in Sources */,
+				19F57FD421B7ABA5008A5AB2 /* WhNotificationViewController.swift in Sources */,
+				19966A9221A261B8000F3376 /* WhHomeViewController.swift in Sources */,
+				19F57FDA21B91049008A5AB2 /* WhJoinCrowdSaleViewController.swift in Sources */,
+				19966AAF21A563AC000F3376 /* WhWalletManageViewController.swift in Sources */,
+				19966A9421A26203000F3376 /* WhBrowseViewController.swift in Sources */,
+				19966A602199A9F2000F3376 /* GCDAsyncUdpSocket.m in Sources */,
+				19966A78219A8C3B000F3376 /* WhAdditionals.swift in Sources */,
+				19966A612199A9F2000F3376 /* GCDAsyncSocket.m in Sources */,
+				19966A9A21A277DA000F3376 /* WhWalletCustomView.swift in Sources */,
+				19F57FC621B7A913008A5AB2 /* WhChangeLanguageViewController.swift in Sources */,
+				19966A9621A26255000F3376 /* WhAssetViewController.swift in Sources */,
+				19966AA321A3B3F4000F3376 /* WhImportWalletViewController.swift in Sources */,
+				19966AA521A3BF5B000F3376 /* WhWalletUtil.swift in Sources */,
+				19F57FC321B4DCD8008A5AB2 /* WhValidCrowdSaleViewController.swift in Sources */,
+				19966A6E2199AA3D000F3376 /* AppDelegate.swift in Sources */,
+				19F57FD221B7AB8F008A5AB2 /* WhMineTxRecordsViewController.swift in Sources */,
+				192EBA7821ACE567002F5A97 /* WhFireViewController.swift in Sources */,
+				197CCA5B21A65BBC0028FEDC /* WhWalletRequestHandler.swift in Sources */,
+				19F57FB521B24D65008A5AB2 /* WhAirDropAssetViewController.swift in Sources */,
+				19966A5D2199A9F2000F3376 /* WhSocketManager.m in Sources */,
+				19966AA121A3B3D7000F3376 /* WhBackupMnemonicViewController.swift in Sources */,
+				197CCA5E21A6D41B0028FEDC /* WhNetWorkConfig.m in Sources */,
+				19966A8E219FFF4C000F3376 /* WhCPTextField.m in Sources */,
+				192EBA7E21AEBE0A002F5A97 /* WhCreateAssetViewController.swift in Sources */,
+				19D5D68821B10F6400FFC025 /* WhAssetDetailViewController.swift in Sources */,
+				192EBA7621ABC526002F5A97 /* WhSendViewController.swift in Sources */,
+				19F57FCA21B7A97E008A5AB2 /* WhUserAgreeMentViewController.swift in Sources */,
+				19D5D68621B0051B00FFC025 /* WhPopContentViewController.swift in Sources */,
+				19966A7C219D6A8D000F3376 /* UIDevice+Helper.m in Sources */,
+				19FC35A521C9E3980088E143 /* WhWalletManager.swift in Sources */,
+				19966A89219EAFCC000F3376 /* WhBlockHeader.swift in Sources */,
+				19F57FBD21B2937E008A5AB2 /* WhTransferAllViewController.swift in Sources */,
+				197CCA6221A7DC8D0028FEDC /* WhBaseModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1996686521997A78000F3376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19966A8A219EE750000F3376 /* WhBlockHeader.swift in Sources */,
+				1996686E21997A78000F3376 /* WHoleWalletTests.swift in Sources */,
+				19966A79219D22A4000F3376 /* WhAdditionals.swift in Sources */,
+				19966AB021A655D1000F3376 /* WhSocketManager.m in Sources */,
+				19966AA821A4124E000F3376 /* WhWalletUtil.swift in Sources */,
+				192EBA7A21AE2BB5002F5A97 /* WhNetWorkConfig.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1996687021997A78000F3376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1996687921997A78000F3376 /* WHoleWalletUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1996686B21997A78000F3376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1996685421997A6E000F3376 /* WHoleWallet */;
+			targetProxy = 1996686A21997A78000F3376 /* PBXContainerItemProxy */;
+		};
+		1996687621997A78000F3376 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1996685421997A6E000F3376 /* WHoleWallet */;
+			targetProxy = 1996687521997A78000F3376 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1996686121997A78000F3376 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1996686221997A78000F3376 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1996687B21997A78000F3376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1996687C21997A78000F3376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1996687E21997A78000F3376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A06FB96522F71399E927A3E8 /* Pods-WHoleWallet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33XFKP2945;
+				INFOPLIST_FILE = WHoleWallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = coder.fft.WHoleWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WHoleWallet/WHoleWallet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1996687F21997A78000F3376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8607A2C9EF5CEEA11AFB4AD4 /* Pods-WHoleWallet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33XFKP2945;
+				INFOPLIST_FILE = WHoleWallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coder.fft.WHoleWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WHoleWallet/WHoleWallet-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1996688121997A78000F3376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4767A5DD32F9A05EB84714D /* Pods-WHoleWalletTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33XFKP2945;
+				INFOPLIST_FILE = WHoleWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coder.fft.WHoleWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WHoleWallet.app/WHoleWallet";
+			};
+			name = Debug;
+		};
+		1996688221997A78000F3376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 455AB3DA178D48414390A2F7 /* Pods-WHoleWalletTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33XFKP2945;
+				INFOPLIST_FILE = WHoleWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coder.fft.WHoleWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WHoleWallet.app/WHoleWallet";
+			};
+			name = Release;
+		};
+		1996688421997A78000F3376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E6FE3B20AB787057D5ABBF2 /* Pods-WHoleWalletUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33XFKP2945;
+				INFOPLIST_FILE = WHoleWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coder.fft.WHoleWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WHoleWallet;
+			};
+			name = Debug;
+		};
+		1996688521997A78000F3376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 765B450A5614583F16CA35D5 /* Pods-WHoleWalletUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33XFKP2945;
+				INFOPLIST_FILE = WHoleWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = coder.fft.WHoleWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WHoleWallet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1996685021997A6E000F3376 /* Build configuration list for PBXProject "WHoleWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1996687B21997A78000F3376 /* Debug */,
+				1996687C21997A78000F3376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1996687D21997A78000F3376 /* Build configuration list for PBXNativeTarget "WHoleWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1996687E21997A78000F3376 /* Debug */,
+				1996687F21997A78000F3376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1996688021997A78000F3376 /* Build configuration list for PBXNativeTarget "WHoleWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1996688121997A78000F3376 /* Debug */,
+				1996688221997A78000F3376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1996688321997A78000F3376 /* Build configuration list for PBXNativeTarget "WHoleWalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1996688421997A78000F3376 /* Debug */,
+				1996688521997A78000F3376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1996684D21997A6E000F3376 /* Project object */;
+}
