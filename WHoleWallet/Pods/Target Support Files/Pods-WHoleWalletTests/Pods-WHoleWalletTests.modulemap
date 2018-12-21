@@ -1,0 +1,6 @@
+framework module Pods_WHoleWalletTests {
+  umbrella header "Pods-WHoleWalletTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
