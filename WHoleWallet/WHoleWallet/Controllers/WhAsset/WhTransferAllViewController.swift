@@ -12,7 +12,7 @@
 import UIKit
 import Toast_Swift
 
-class WhTransferAllViewController: UIViewController {
+class WhTransferAllViewController: UIViewController, UITextFieldDelegate {
 
     var assetInfo: Dictionary<String,Any>?
     private var scrollView = UIScrollView(frame: CGRect.zero)
@@ -67,6 +67,7 @@ class WhTransferAllViewController: UIViewController {
         
         
         let receiveAddrL = WhCommonInputRow(icon: "main_icon_input_address", title: "Receive Address", "Please Input Receive Address")
+        receiveAddrL.tf.delegate = self
         container.addSubview(receiveAddrL)
         receiveAddrL.snp.makeConstraints { (make) in
             make.left.top.equalTo(20)
@@ -75,6 +76,7 @@ class WhTransferAllViewController: UIViewController {
         }
         
         let feeRate = WhCommonInputRow(icon: "assert_icon_minerfee", title: "Fee Rate (BCH/KB)", "0")
+        feeRate.tf.isUserInteractionEnabled = false
         container.addSubview(feeRate)
         feeRate.snp.makeConstraints { (make) in
             make.left.equalTo(receiveAddrL.snp.left)

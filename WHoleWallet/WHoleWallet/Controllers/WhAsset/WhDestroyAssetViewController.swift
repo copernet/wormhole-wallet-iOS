@@ -13,7 +13,7 @@
 import UIKit
 import Toast_Swift
 
-class WhDestroyAssetViewController: UIViewController {
+class WhDestroyAssetViewController: UIViewController, UITextFieldDelegate {
 
     var assetInfo: Dictionary<String,Any>
     private var scrollView = UIScrollView(frame: CGRect.zero)
@@ -66,7 +66,8 @@ class WhDestroyAssetViewController: UIViewController {
         }
         
         
-        let transferAmount = WhCommonInputRow(icon: "assert_icon_number", title: "Destroy Amount", "Please Input The Number Your Want To Destroy")
+        let transferAmount = WhCommonInputRow(icon: "assert_icon_number", title: "Destroy Amount", "Please Input The Number Your Want To Destroy", .numberPad)
+        transferAmount.tf.delegate = self
         amountTF = transferAmount.tf
         container.addSubview(transferAmount)
         transferAmount.snp.makeConstraints { (make) in
@@ -76,6 +77,7 @@ class WhDestroyAssetViewController: UIViewController {
         }
         
         let noteRow = WhCommonInputRow(icon: "assert__icon_remark", title: "Note", "Please Input Note")
+        noteRow.tf.delegate = self
         container.addSubview(noteRow)
         noteRow.snp.makeConstraints { (make) in
             make.left.equalTo(transferAmount.snp.left)
@@ -86,6 +88,7 @@ class WhDestroyAssetViewController: UIViewController {
         
         
         let feeRate = WhCommonInputRow(icon: "assert_icon_minerfee", title: "Fee Rate (BCH/KB)", "0")
+        feeRate.tf.isUserInteractionEnabled = false
         feeTF = feeRate.tf
         container.addSubview(feeRate)
         feeRate.snp.makeConstraints { (make) in

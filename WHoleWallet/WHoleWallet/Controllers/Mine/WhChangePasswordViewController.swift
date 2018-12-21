@@ -15,7 +15,7 @@ import SnapKit
 import KeychainAccess
 import BitcoinKit
 
-class WhChangePasswordViewController: UIViewController {
+class WhChangePasswordViewController: UIViewController, UITextFieldDelegate {
 
 
     var passwordTF: UITextField!
@@ -26,6 +26,7 @@ class WhChangePasswordViewController: UIViewController {
 
         //password
         let passwordRow = WhCommonInputRow(icon: "wallet_password_icon", title: "Set New Password", "Please Input Password")
+        passwordRow.tf.delegate = self
         view.addSubview(passwordRow)
         passwordRow.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(20)
@@ -38,6 +39,7 @@ class WhChangePasswordViewController: UIViewController {
         
         //repeat password
         let repeatPasswordRow = WhCommonInputRow(icon: "wallet_password_repeat_icon", title: "Repeat New Password", "Please Repeat Input New Password ")
+        repeatPasswordRow.tf.delegate = self
         view.addSubview(repeatPasswordRow)
         repeatPasswordRow.snp.makeConstraints { (make) in
             make.top.equalTo(passwordRow.snp.bottom).offset(15)
@@ -62,6 +64,11 @@ class WhChangePasswordViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.height.equalTo(45)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 

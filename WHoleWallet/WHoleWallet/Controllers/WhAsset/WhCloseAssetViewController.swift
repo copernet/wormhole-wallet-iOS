@@ -66,6 +66,7 @@ class WhCloseAssetViewController: UIViewController {
         
         
         let feeRate = WhCommonInputRow(icon: "assert_icon_minerfee", title: "Fee Rate (BCH/KB)", "0")
+        feeRate.tf.isUserInteractionEnabled = false
         feeTF = feeRate.tf
         container.addSubview(feeRate)
         feeRate.snp.makeConstraints { (make) in
