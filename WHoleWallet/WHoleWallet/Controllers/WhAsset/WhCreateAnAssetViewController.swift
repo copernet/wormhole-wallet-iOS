@@ -64,6 +64,9 @@ class WhCreateAnAssetViewController: UIViewController, UITextFieldDelegate, UIPo
     
     @IBOutlet weak var sureButton: UIButton!
     
+    
+    private var deadLineTime: Date!
+    
     var categories = Dictionary<String, Array<String>>()
     
     override func viewDidLoad() {
@@ -125,12 +128,31 @@ class WhCreateAnAssetViewController: UIViewController, UITextFieldDelegate, UIPo
         
         manulFeeTF.isUserInteractionEnabled = false
         
+        //
+        deadLine.delegate = self
+        
     }
     
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        //select time
+        if textField == deadLine {
+            let picker = WhDatePicker { (pop, b) in
+                let popPicker = pop as! WhDatePicker
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                textField.text = dateFormatter.string(from: popPicker.date)
+                self.deadLineTime = popPicker.date
+            }
+            picker.show()
+            return false
+        }
         return true
     }
     

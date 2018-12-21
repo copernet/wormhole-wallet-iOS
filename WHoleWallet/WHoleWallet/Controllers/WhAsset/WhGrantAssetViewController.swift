@@ -13,7 +13,7 @@
 import UIKit
 import Toast_Swift
 
-class WhGrantAssetViewController: UIViewController {
+class WhGrantAssetViewController: UIViewController, UITextFieldDelegate {
 
     var assetInfo: Dictionary<String,Any>
     private var scrollView = UIScrollView(frame: CGRect.zero)
@@ -53,6 +53,11 @@ class WhGrantAssetViewController: UIViewController {
         fetchFeeRate()
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     func configView() {
         scrollView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
@@ -66,7 +71,8 @@ class WhGrantAssetViewController: UIViewController {
         }
         
         
-        let grantCount = WhCommonInputRow(icon: "assert_icon_number", title: "Grant Amount", "Please Input The Number Your Want To Send")
+        let grantCount = WhCommonInputRow(icon: "assert_icon_number", title: "Grant Amount", "Please Input The Number Your Want To Send", .numberPad)
+        grantCount.tf.delegate = self
         amountTF = grantCount.tf
         container.addSubview(grantCount)
         grantCount.snp.makeConstraints { (make) in
@@ -77,6 +83,7 @@ class WhGrantAssetViewController: UIViewController {
         
         
         let feeRate = WhCommonInputRow(icon: "assert_icon_minerfee", title: "Fee Rate (BCH/KB)", "0")
+        feeRate.tf.isUserInteractionEnabled = false
         feeTF = feeRate.tf
         container.addSubview(feeRate)
         feeRate.snp.makeConstraints { (make) in

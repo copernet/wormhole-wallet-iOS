@@ -13,7 +13,7 @@
 import UIKit
 import Toast_Swift
 
-class WhAirDropAssetViewController: UIViewController {
+class WhAirDropAssetViewController: UIViewController, UITextFieldDelegate {
 
     var assetInfo: Dictionary<String,Any>
     private var scrollView = UIScrollView(frame: CGRect.zero)
@@ -77,7 +77,8 @@ class WhAirDropAssetViewController: UIViewController {
         }
         
         
-        let airDropCount = WhCommonInputRow(icon: "assert_icon_number", title: "AirDrop Amount", "Please Input The Number Your Want To AirDrop")
+        let airDropCount = WhCommonInputRow(icon: "assert_icon_number", title: "AirDrop Amount", "Please Input The Number Your Want To AirDrop", .numberPad)
+        airDropCount.tf.delegate = self
         self.amountTF = airDropCount.tf
         container.addSubview(airDropCount)
         airDropCount.snp.makeConstraints { (make) in
@@ -89,6 +90,7 @@ class WhAirDropAssetViewController: UIViewController {
         
         
         let feeRate = WhCommonInputRow(icon: "assert_icon_minerfee", title: "Fee Rate (BCH/KB)", "0")
+        feeRate.tf.isUserInteractionEnabled = false
         self.feeTF = feeRate.tf
         container.addSubview(feeRate)
         feeRate.snp.makeConstraints { (make) in
@@ -140,6 +142,11 @@ class WhAirDropAssetViewController: UIViewController {
         sure.addTarget(self, action: #selector(sureAction), for: .touchUpInside)
         
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @objc func sureAction()  {

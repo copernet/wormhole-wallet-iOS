@@ -559,3 +559,65 @@ class WhInputAlertView: MMPopupView, UITextFieldDelegate {
     }
     
 }
+
+
+
+class WhDatePicker: MMPopupView {
+    
+//    private var picker:UIDatePicker!
+    var date: Date!
+    let complete: MMPopupCompletionBlock
+    
+    init(completeBlock:@escaping MMPopupCompletionBlock) {
+   
+        self.complete = completeBlock
+        super.init(frame: CGRect.zero)
+        self.backgroundColor = UIColor.white
+        self.type = MMPopupType.custom
+        self.layer.cornerRadius = 8
+        configAlertView()
+        
+        MMPopupWindow.shared()?.touchWildToHide = true
+    }
+    
+    func configAlertView() {
+        let width = screenWidth() - 40
+        self.snp.makeConstraints { (make) in
+            make.width.height.equalTo(width)
+        }
+        
+        let datePicker = UIDatePicker(frame: .zero)
+        datePicker.datePickerMode = .dateAndTime
+        datePicker.addTarget(self, action: #selector(valueChanged(picker:)), for: .valueChanged)
+        self.addSubview(datePicker)
+        datePicker.snp.makeConstraints { (make) in
+            make.top.left.equalTo(10)
+            make.right.bottom.equalTo(-10)
+        }
+        self.date = datePicker.date
+  
+    }
+    
+    @objc func valueChanged(picker: UIDatePicker){
+        self.date = picker.date
+    }
+    
+    deinit {
+        MMPopupWindow.shared()?.touchWildToHide = false
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    override func hide() {
+        complete(self, true)
+        super.hide()
+    }
+
+    
+}
+
+
+

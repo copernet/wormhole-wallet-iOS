@@ -13,7 +13,7 @@
 import UIKit
 import Toast_Swift
 
-class WhSendAssetViewController: UIViewController {
+class WhSendAssetViewController: UIViewController, UITextFieldDelegate {
 
     var assetInfo: Dictionary<String,Any>
     private var scrollView = UIScrollView(frame: CGRect.zero)
@@ -74,6 +74,7 @@ class WhSendAssetViewController: UIViewController {
         
         
         let receiveAddrL = WhCommonInputRow(icon: "main_icon_input_address", title: "Receive Address", "Please Input Receive Address")
+        receiveAddrL.tf.delegate = self
         self.toTF = receiveAddrL.tf
         container.addSubview(receiveAddrL)
         receiveAddrL.snp.makeConstraints { (make) in
@@ -83,7 +84,8 @@ class WhSendAssetViewController: UIViewController {
             make.height.equalTo(WhCommonInputRow.defaultH).priority(500)
         }
         
-        let transferAmount = WhCommonInputRow(icon: "assert_icon_number", title: "Transer Amount", "Please Input The Number Your Want To Send")
+        let transferAmount = WhCommonInputRow(icon: "assert_icon_number", title: "Transer Amount", "Please Input The Number Your Want To Send", .numberPad)
+        transferAmount.tf.delegate = self
         container.addSubview(transferAmount)
         transferAmount.snp.makeConstraints { (make) in
             make.left.equalTo(receiveAddrL.snp.left)
@@ -93,6 +95,7 @@ class WhSendAssetViewController: UIViewController {
         }
         
         let noteRow = WhCommonInputRow(icon: "assert__icon_remark", title: "Note", "Please Input Note")
+        noteRow.tf.delegate = self
         container.addSubview(noteRow)
         noteRow.snp.makeConstraints { (make) in
             make.left.equalTo(transferAmount.snp.left)
@@ -103,6 +106,7 @@ class WhSendAssetViewController: UIViewController {
         
         
         let feeRate = WhCommonInputRow(icon: "assert_icon_minerfee", title: "Fee Rate (BCH/KB)", "0")
+        feeRate.tf.isUserInteractionEnabled = false
         self.feeTF = feeRate.tf
         container.addSubview(feeRate)
         feeRate.snp.makeConstraints { (make) in
@@ -154,6 +158,13 @@ class WhSendAssetViewController: UIViewController {
         sure.addTarget(self, action: #selector(sureAction), for: .touchUpInside)
         
         
+    }
+    
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @objc func sureAction()  {

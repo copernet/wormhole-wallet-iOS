@@ -78,6 +78,7 @@ class WhJoinCrowdSaleViewController: UIViewController, UITextFieldDelegate {
         }
         
         let amountRow = WhCommonInputRow(icon: "main_icon_dollar", title: "Amount (WHC)", "0.1WHC", .numberPad)
+        amountRow.tf.delegate = self
         self.amoutTF = amountRow.tf
         container.addSubview(amountRow)
         amountRow.snp.makeConstraints { (make) in
@@ -88,6 +89,7 @@ class WhJoinCrowdSaleViewController: UIViewController, UITextFieldDelegate {
         }
         
         let feeRate = WhCommonInputRow(icon: "assert_icon_minerfee", title: "Fee Rate (BCH/KB)", "0")
+        feeRate.tf.isUserInteractionEnabled = false
         self.feeTF = feeRate.tf
         container.addSubview(feeRate)
         feeRate.snp.makeConstraints { (make) in
